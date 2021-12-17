@@ -1,0 +1,42 @@
+<style>
+      /* Totals section */
+      .totals .totals-item {
+         float: right;
+         clear: both;
+         width: 100%;
+         margin-bottom: 10px;
+      }
+      .totals .totals-item label {
+         float: left;
+         clear: both;
+         width: 79%;
+         text-align: right;
+      }
+      .totals .totals-item .totals-value {
+         float: right;
+         width: 21%;
+         text-align: right;
+      }
+   </style>
+   <td class="ring-in t-data">
+      <dz-cart-item id="[[id]]">
+         <a href="javascript:void(0);" class="at-in">
+            <img src="[[image]]" class="img-responsive" alt="[[title]]" style="height:100px;object-fit:cover;">
+         </a>
+         <div class="sed">
+            <h5>[[title]]</h5>
+         </div>
+            <div class="clearfix"> </div>
+            <div class="close1" dz-func="_removeFromCart"> <i class="fa fa-times" aria-hidden="true"></i>
+         </div>
+      </dz-cart-item>
+   </td>
+   <td class="t-data">$[[price]]</td>
+   <td class="t-data">
+      <dz-cart-item id="[[id]]">
+      <div class="product-quantity">
+         <input type="number" value="[[cartQuantity]]" min="1" dz-cart-item-qty>
+      </div>
+      </dz-cart-item>
+   </td>
+   <td class="t-data t-w3l">$[[subTotal]]</td>
