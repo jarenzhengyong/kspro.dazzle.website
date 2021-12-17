@@ -35,14 +35,14 @@
                </div>
                <div class="col-md-7 span-1 ">
                   <h3>[[title]]<!-- (500 g) --></h3>
-                  <p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
+                  <p class="in-para">[[subDescription]]</p>
                   <div class="price_single">
                      <span class="reducedfrom "> <!-- <del>$2.00</del> -->$[[price]]</span>
                   
                      <div class="clearfix"></div>
                   </div>
                   <h4 class="quick">Quick Overview:</h4>
-                  <p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
+                  <p class="quick_desc">[[detail]]</p>
                      <div class="add-to">
                         <button dz-func="_addToCart" class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="[[id]]" data-name=[[title]]" data-summary="summary 24" data-price="[[price]]" data-quantity="1" data-image="[[image]]">Add to Cart</button>
                      </div>
@@ -51,4 +51,4 @@
             </div>
          </div>
       </div>
-   </div>
+</div>
