@@ -1,19 +1,15 @@
 <div class="container">
 	<div class="col-md-3 footer-grid">
-		<h3>About Us</h3>
-		<p>Nam libero tempore, cum soluta nobis est eligendi 
-			optio cumque nihil impedit quo minus id quod maxime 
-			placeat facere possimus.</p>
+		<h3>關於我們</h3>
+		<p>三十年的老字號，柔合傳統經驗和科技，務求令客戶獲得最好的服務</p>
 	</div>
 	<div class="col-md-3 footer-grid ">
 		<h3>Menu</h3>
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="kitchen.html">Kitchen</a></li>
-			<li><a href="care.html">Personal Care</a></li>
-			<li><a href="hold.html">Household</a></li>						 
-			<li><a href="codes.html">Short Codes</a></li> 
-			<li><a href="contact.html">Contact</a></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="kitchen.html">印刷服務</a></li>
+			<li><a href="care.html">關於我們</a></li>
+			<li><a href="hold.html">聯絡我們</a></li>						 
 		</ul>
 	</div>
 	<div class="col-md-3 footer-grid ">
@@ -27,16 +23,14 @@
 			 
 		</ul>
 	</div>
-		<dz-user-panel>
 	<div class="col-md-3 footer-grid">
 		<h3>My Account</h3>
 		<ul>
-			<li dz-user-no-login><a href="login.html">Login</a></li>
-			<li dz-user-no-login><a href="register.html">Register</a></li>
-			<!-- <li><a href="wishlist.html">Wishlist</a></li> -->
+			<li><a href="login.html">Login</a></li>
+			<li><a href="register.html">Register</a></li>
+			<li><a href="wishlist.html">Wishlist</a></li>
 		</ul>
 	</div>
-		</dz-user-panel>
 	<div class="clearfix"></div>
 		<div class="footer-bottom">
 			<h2 ><a href="index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
