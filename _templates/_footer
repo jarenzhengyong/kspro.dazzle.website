@@ -1,61 +1,67 @@
 <div class="container">
-	<div class="col-md-3 footer-grid">
-		<h3>關於我們</h3>
-		<p>三十年的老字號，柔合傳統經驗和科技，務求令客戶獲得最好的服務</p>
-	</div>
-	<div class="col-md-3 footer-grid ">
-		<h3>Menu</h3>
-		<ul>
-			<li><a href="index.html">首頁</a></li>
-			<li><a href="kitchen.html">印刷服務</a></li>
-			<li><a href="care.html">關於我們</a></li>
-			<li><a href="hold.html">聯絡我們</a></li>						 
-		</ul>
-	</div>
-	<div class="col-md-3 footer-grid ">
-		<h3>Customer Services</h3>
-		<ul>
-			<li><a href="shipping.html">Shipping</a></li>
-			<li><a href="terms.html">Terms & Conditions</a></li>
-			<li><a href="faqs.html">Faqs</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="offer.html">Online Shopping</a></li>						 
-			 
-		</ul>
-	</div>
-	<div class="col-md-3 footer-grid">
-		<h3>My Account</h3>
-		<ul>
-			<li><a href="login.html">Login</a></li>
-			<li><a href="register.html">Register</a></li>
-			<li><a href="wishlist.html">Wishlist</a></li>
-		</ul>
-	</div>
-	<div class="clearfix"></div>
-		<div class="footer-bottom">
-			<h2 ><a href="index.html"><b>T<br>H<br>E</b>Big Store<span>The Best Supermarket</span></a></h2>
-			<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-			<ul class="social-fo">
-				<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-				<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-			</ul>
-			<div class=" address">
-				<div class="col-md-4 fo-grid1">
-						<p><i class="fa fa-home" aria-hidden="true"></i>12K Street , 45 Building Road Canada.</p>
-				</div>
-				<div class="col-md-4 fo-grid1">
-						<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>	
-				</div>
-				<div class="col-md-4 fo-grid1">
-					<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@example1.com</a></p>
-				</div>
-				<div class="clearfix"></div>
-				
-				</div>
+		<div class="col-md-3 footer-grid">
+			<h3>關於我們</h3>
+				<p>百鼎竣科技有限公司集合了熱心服務社會，致力為業界提高工程和設計服務質素。
+					</p>
 		</div>
-	<div class="copy-right">
-		<p> &copy; 2016 Big store. All Rights Reserved .</p>
+		<div class="col-md-3 footer-grid ">
+			<h3>菜單</h3>
+			<ul>
+				<li><a href="index.html">首頁</a></li>
+				<li><a href="about.html">關於我們</a></li>
+				<li><a href="Service.html">裝修案例</a></li>
+				<li><a href="ProfessionalMatching.html">專業配對</a></li>						 
+				<li><a href="Tendering.html">招標項目</a></li> 
+				<li><a href="contact.html".html>聯絡我們</a></li>
+		
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grid ">
+			<h3>顧客服務</h3>
+			<ul>
+				<li><a href="shipping.html">運送</a></li>
+				<li><a href="terms.html">使用條款</a></li>
+				<li><a href="faqs.html">常見問題</a></li>
+				<li><a href="contact.html">關於我們</a></li>
+				<li><a href="privacy.html">私隱政策</a></li>						 
+				 
+			</ul>
+		</div>
+		<div class="col-md-3 footer-grid">
+			<h3>我的帳戶</h3>
+			<ul>
+				<li><a href="login.html">登入</a></li>
+				<li><a href="register.html">註冊</a></li>
+				<li><a href="wishlist.html">願望清單</a></li>
+				
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+			<div class="footer-bottom">
+								
+				<ul class="social-fo">
+					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+					<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				</ul>
+				<div class=" address">
+					<div class="col-md-4 fo-grid1">
+							<p><i class="fa fa-home" aria-hidden="true"></i>10:00 am – 7:00 pm</p>
+					</div>
+					<div class="col-md-4 fo-grid1">
+							<p><i class="fa fa-phone" aria-hidden="true"></i>(852) 95053378</p>	
+					</div>
+					<div class="col-md-4 fo-grid1">
+						<p><a href="infodbiz.fishballking@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>cs@goodjob.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+					
+					</div>
+			</div>
+		<div class="copy-right">
+			<p> 版權所有 &copy; 2021 百鼎竣科技有限公司 保留所有權利 </p>
+		</div>
 	</div>
 </div>
+

@@ -63,7 +63,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		});
 		</script>
 		<!---//End-rate---->
-    <link rel="stylesheet" href="./css/userbase.css" type="text/css">
 		<script type="module" src="/_user/loader.js"></script>
 		<meta property="dz:uid" content="kudosky">
 </head>
@@ -157,190 +156,118 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
  <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >登入</h3>
-		<h4><a href="index.html">首頁</a><label>/</label>登入</h4>
+		<h3 >裝修案例</h3>
+		<h4><a href="index.html">首頁</a><label>/</label>裝修案例</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
-<!--login-->
-  <div class="main-agileits" style="width:1000px;margin:30px auto;">
-    <dz-order-detail id=[[id]]>
-      <style>
-          .legend {
-              text-align: left;
-          }
-
-          h2 {
-              text-align: left;
-              background: #585858;
-              padding: 5px 10px;
-              color: #FFF;
-              border-radius: 2px;
-              font-size: 16px;
-              margin: 5px 0;
-          }
-
-          .orders {
-              text-align: left;
-          }
-
-          .text-left {
-              text-align: left;
-          }
-
-          button.back {
-              border: 1px solid #6f6f6f;
-              padding: 0 10px;
-              border-radius: 2px;
-              cursor: pointer;
-              background: #f6f6f6;
-              display: flex;
-              align-items: center;
-          }
-
-          button.back i {
-              font-size: 16px;
-              margin-right: 5px;
-          }
-
-          .mt-2 {
-              margin-top: .5rem !important;
-          }
-      </style>
-      <h4 class="text-left">訂單 <span class="order-id"></span></h4>
-      <form action="" name="shipping-form" class="profile-form text-left">
-          <h2>資訊</h2>
-          <div class="content text-left customer">
-              <!-- <p class="mt-2">Full name: <span class="shipping-full-name"></span></p>
-              <p class="mt-2">Phone number: <span class="shipping-phone"></span></p>
-              <p class="mt-2">Shipping address: <span class="shipping-address"></span></p> -->
-              <p class="mt-2">運送方法: <span class="shipping-method"></span></p>
-              <p class="mt-2">付款方式: <span class="payment-method"></span></p>
-          </div>
-          <br>
-      </form>
-      <form action="" name="profile-form" class="profile-form text-left">
-          <h2>服務資訊</h2>
-          <div class="product-list">
-              <style>
-                  .orders {
-                      overflow: hidden;
-                  }
-              </style>
-
-              <section class="section-table">
-                  <style>
-                      .section-table {
-                          overflow-x: auto;
-                          width: 100%;
-                      }
-
-                      .table-item {
-                          min-width: 866px;
-                          margin-top: 20px;
-                          margin-bottom: 20px;
-                      }
-
-                      .table-item .header-table {
-                          display: flex;
-                          border-bottom: 1px solid #ddd;
-                          padding-bottom: 10px;
-                      }
-
-                      .header-table div {
-                          width: 20%;
-                          padding-right: 10px;
-                      }
-
-                      @media screen and (max-width: 768px) {
-                          .header-table div {
-                              width: 15%;
-                          }
-                      }
-                  </style>
-                  <div class="table-item">
-                      <div class="header-table">
-                          <div>ID</div>
-                          <div>服務名稱</div>
-                          <div>價錢 ($)</div>
-                          <div>數量</div>
-                          <div>總額 ($)</div>
-                      </div>
-                      <div class="order-wrapper" data-wrapper=""></div>
-                  </div>
-              </section>
-
-              <div class="body-table">
-                  <style>
-                      .body-table {
-                          width: 100%;
-                          display: flex;
-                          margin-top: 10px;
-                          align-items: center;
-                      }
-
-                      .body-table .item {
-                          width: 20%;
-                          padding-right: 10px;
-                      }
-
-                      @media screen and (max-width: 768px) {
-                          .body-table .item {
-                              width: 15%;
-                          }
-                      }
-
-                      .item a {
-                          text-decoration: none;
-                      }
-                  </style>
-                  <template id="order-item">
-                      <div id="[[productId]]">
-                          <div class="body-table">
-                              <div class="item">
-                                  [[id]]
-                              </div>
-
-                              <div class="item">
-                                  [[title]]
-                              </div>
-
-                              <div class="item">
-                                  [[price]]
-                              </div>
-
-                              <div class="item">
-                                  [[quantity]]
-                              </div>
-
-                              <div class="item">
-                                  [[amount]]
-                              </div>
-                          </div>
-                      </div>
-                  </template>
-              </div>
-          </div>
-          <br>
-      </form>
-
-      <form action="" name="profile-form" class="profile-form text-left">
-          <h2>摘要</h2>
-          <div class="content text-left">
-              <!-- <p class="mt-2">Sub-Total: <span class="summary-sub-total"></span></p>
-              <p class="mt-2">Shipping: <span class="summary-shipping-fee"></span></p>
-              <p class="mt-2">Discount: <span class="summary-discount"></span></p> -->
-              <p class="mt-2">狀況: <span class="summary-status"></span></p>
-              <p class="mt-2">總額: <span class="summary-total"></span></p>
-          </div>
-          <br>
-      </form>
-      <div class="text-left">
-          <button dz-func="_clickToBack" class="back"><i class="fa fa-caret-left"></i>返回</button>
-      </div>
-
-    </dz-order-detail>
-  </div>
+<!--content-->
+<div class="product">
+	<div class="container">
+		<div class="spec ">
+			<h3>服務</h3>
+			<div class="ser-t">
+				<b></b>
+				<span><i></i></span>
+				<b class="line"></b>
+			</div>
+		</div>
+		<dz-product-wrapper>
+			<div class=" con-w3l agileinf" data-wrapper dz-data-id="all-product" dz-data-template-id="product-item">
+						<div class="col-md-3 pro-1">
+							<div class="col-m">
+							<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+									<img src="images/deco_demo_1-min.jpg" class="img-responsive" alt="">
+								</a>
+								<div class="mid-1">
+									<div class="women">
+										<h6><a href="single1.html">Gold & Mirrors</a></h6>							
+									</div>
+									<div class="mid-2">
+										<p ><label>$642000</label><em class="item_price">$542000</em></p>
+										  <div class="block">
+											<div class="starbox small ghosting"> </div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+										<div class="add">
+									   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Gold&Mirrors" data-summary="summary 1" data-price="542000" data-quantity="1" data-image="images/deco_demo_1-min.jpg">加入購物車</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 pro-1">
+							<div class="col-m">
+								<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
+									<img src="images/deco_demo_4-min.jpg" class="img-responsive" alt="">
+								</a>
+								<div class="mid-1">
+									<div class="women">
+										<h6><a href="single2.html">20 Glamorous Home Vanities</a></h6>							
+									</div>
+									<div class="mid-2">
+										<p ><label>$335000</label><em class="item_price">$235000</em></p>
+										  <div class="block">
+											<div class="starbox small ghosting"> </div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+										<div class="add">
+									   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="20GlamorousHomeVanities" data-summary="summary 2" data-price="235000" data-quantity="1" data-image="images/deco_demo_4-min.jpg">加入購物車</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-3 pro-1">
+							<div class="col-m">
+								<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
+									<img src="images/deco_demo_7-min.jpg" class="img-responsive" alt="">
+								</a>
+								<div class="mid-1">
+									<div class="women">
+										<h7><a href="single3.html">Perfect Bathrooms With Luxurios</a></h7>							
+									</div>
+									<div class="mid-2">
+										<p ><label>$923000</label><em class="item_price">$823000</em></p>
+										  <div class="block">
+											<div class="starbox small ghosting"> </div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+										<div class="add">
+									   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="PerfectBathroomsWithLuxurios" data-summary="summary 3" data-price="823000" data-quantity="1" data-image="images/deco_demo_7-min.jpg">加入購物車</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 pro-1">
+							<div class="col-m">
+								<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
+									<img src="images/deco_demo_8-min.jpg" class="img-responsive" alt="">
+								</a>
+								<div class="mid-1">
+									<div class="women">
+										<h6><a href="single4.html">Stylish Mudrooms</a></h6>							
+									</div>
+									<div class="mid-2">
+										<p ><label>$31000</label><em class="item_price">$21000</em></p>
+										  <div class="block">
+											<div class="starbox small ghosting"> </div>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+										<div class="add">
+									   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="StylishMudrooms" data-summary="summary 4" data-price="21000" data-quantity="1" data-image="images/deco_demo_8-min.jpg">加入購物車</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</dz-product-wrapper>		
+		
+	</div>
+</div>
 <!--footer-->
 <div class="footer" dz-template-id="_footer">
 	<div class="container">
@@ -353,11 +280,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<h3>菜單</h3>
 			<ul>
 				<li><a href="index.html">首頁</a></li>
-				<li><a href="kitchen.html">關於我們</a></li>
-				<li><a href="care.html">裝修案例</a></li>
-				<li><a href="hold.html">專業配對</a></li>						 
-				<li><a href="codes.html">招標項目</a></li> 
-				<li><a href="contact.html".html">聯絡我們</a></li>
+				<li><a href="about.html">關於我們</a></li>
+				<li><a href="Service.html">裝修案例</a></li>
+				<li><a href="ProfessionalMatching.html">專業配對</a></li>						 
+				<li><a href="Tendering.html">招標項目</a></li> 
+				<li><a href="contact.html".html>聯絡我們</a></li>
 		
 			</ul>
 		</div>
@@ -368,7 +295,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<li><a href="terms.html">使用條款</a></li>
 				<li><a href="faqs.html">常見問題</a></li>
 				<li><a href="contact.html">關於我們</a></li>
-				<li><a href="offer.html">網上購物</a></li>						 
+				<li><a href="privacy.html">私隱政策</a></li>						 
 				 
 			</ul>
 		</div>

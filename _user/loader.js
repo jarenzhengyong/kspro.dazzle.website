@@ -3,7 +3,7 @@ import {Dazzle} from 'https://portal.dazzle.website/node_modules/@dazzle/dz-dazz
 import 'https://portal.dazzle.website/node_modules/@vaadin/vaadin-dialog/vaadin-dialog.js';
 // import './dz-booking.js';
 
-window.siteUid = 'kspro';
+window.siteUid = 'kudosky';
 
 await Dazzle.listenHotKeys();
 await Dazzle.initGlobalVars();
