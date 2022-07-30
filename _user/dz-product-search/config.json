@@ -1,0 +1,151 @@
+{
+  "exampleData": "exampleData",
+  "tables": [
+    {
+      "id": "product",
+      "field": [
+        "id",
+        "stock",
+        "price",
+        "category",
+        "title",
+        "detail",
+        "image",
+        "isHot",
+        "subDescription"
+      ],
+      "title": "product",
+      "templatePage": "product-detail.html",
+      "pageNameField": "id",
+      "columnDefs": [
+        {
+          "type": "ID",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellRendererFramework": "id-renderer",
+          "field": "id",
+          "headerName": "ID1",
+          "hide": "false",
+          "order": "0"
+        },
+        {
+          "type": "number",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellEditorFramework": "numeric-editor",
+          "field": "stock",
+          "headerName": "Stock",
+          "hide": "false",
+          "order": "1"
+        },
+        {
+          "type": "number",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellEditorFramework": "numeric-editor",
+          "field": "price",
+          "headerName": "Price",
+          "hide": "false",
+          "order": "2"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "category",
+          "headerName": "Category",
+          "hide": "false",
+          "order": "3"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "title",
+          "headerName": "Title",
+          "hide": "false",
+          "order": "4"
+        },
+        {
+          "type": "text",
+          "sortable": false,
+          "resizable": true,
+          "filter": true,
+          "editable": false,
+          "esType": "text",
+          "cellRendererFramework": "html-renderer",
+          "field": "detail",
+          "headerName": "Detail",
+          "hide": "false",
+          "order": "5"
+        },
+        {
+          "type": "image",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellRendererFramework": "image-renderer",
+          "field": "image",
+          "headerName": "Image",
+          "hide": "false",
+          "order": "6"
+        },
+        {
+          "type": "boolean",
+          "sortable": true,
+          "resizable": false,
+          "filter": true,
+          "editable": false,
+          "esType": "boolean",
+          "cellRendererFramework": "boolean-renderer",
+          "field": "isHot",
+          "headerName": "Is Hot Product",
+          "hide": "false",
+          "order": "7"
+        },
+        {
+          "type": "text",
+          "sortable": false,
+          "resizable": true,
+          "filter": true,
+          "editable": false,
+          "esType": "text",
+          "cellRendererFramework": "html-renderer",
+          "field": "id",
+          "headerName": "html field test",
+          "hide": "false",
+          "order": "8"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "subDescription",
+          "headerName": "sub description",
+          "hide": "false",
+          "order": "9"
+        }
+      ]
+    }
+  ]
+}

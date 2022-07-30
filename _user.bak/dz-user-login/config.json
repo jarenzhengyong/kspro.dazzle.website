@@ -1,0 +1,141 @@
+{
+  "exampleData": "exampleData",
+  "tables": [
+    {
+      "id": "user",
+      "field": [
+        "id",
+        "cognitoUsername",
+        "email",
+        "firstName",
+        "lastName",
+        "phone",
+        "gender",
+        "jsonOther",
+        "birthday"
+      ],
+      "title": "user",
+      "templatePage": "",
+      "pageNameField": "",
+      "columnDefs": [
+        {
+          "type": "ID",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellRendererFramework": "id-renderer",
+          "field": "id",
+          "headerName": "ID",
+          "hide": "undefined",
+          "order": "0"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "cognitoUsername",
+          "headerName": "Coginto username (readonly)",
+          "hide": "false",
+          "order": "1"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "email",
+          "headerName": "Email (readonly)",
+          "hide": "false",
+          "order": "2"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "firstName",
+          "headerName": "First name",
+          "hide": "false",
+          "order": "3"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "lastName",
+          "headerName": "Last name",
+          "hide": "false",
+          "order": "4"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "phone",
+          "headerName": "Phone",
+          "hide": "false",
+          "order": "5"
+        },
+        {
+          "type": "select",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "cellEditor": "agSelectCellEditor",
+          "cellEditorParams": {
+            "values": [
+
+            ]
+          },
+          "field": "gender",
+          "headerName": "Gender",
+          "hide": "false",
+          "order": "6"
+        },
+        {
+          "type": "keyword",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "keyword",
+          "field": "jsonOther",
+          "headerName": "JSON other",
+          "hide": "false",
+          "order": "7"
+        },
+        {
+          "type": "date",
+          "sortable": true,
+          "resizable": true,
+          "filter": true,
+          "editable": true,
+          "esType": "long",
+          "cellRendererFramework": "date-renderer",
+          "cellEditorFramework": "date-editor",
+          "field": "birthday",
+          "headerName": "Birthday",
+          "hide": "false",
+          "order": "8"
+        }
+      ]
+    }
+  ]
+}

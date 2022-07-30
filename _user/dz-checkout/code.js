@@ -117,6 +117,8 @@ class dzCheckoutCode extends dzEditableComponent {
               description: 'T2 checkout',
               custom_id: 'TODO',
               soft_descriptor: 'Mingkee checkout',
+              //soft_descriptor: 'Poko checkout',
+
               amount: {
                 currency_code: window.helpers.getDefaultConfig().paypal.currency,
                 value: this.total,
@@ -131,6 +133,8 @@ class dzCheckoutCode extends dzEditableComponent {
             }],
           application_context: {
             brand_name: 'Mingkee payment',
+            //brand_name: 'Poko payment',
+
             // TODO implement handle shipping address
           }
         });
@@ -205,7 +209,10 @@ class dzCheckoutCode extends dzEditableComponent {
           case '_submitOrder':
             await this._calculateSummary();
             await this._handleSubmitOrder();
-            await this.loadPaypalSdk();
+            // waiting to write a function to redirect the href to page with order id as postfix
+            // location.href="/order-detail.html#"+
+            // await this.loadPaypalSdk();
+          
             item.style.display = 'none'
             break;
         }
@@ -258,60 +265,79 @@ class dzCheckoutCode extends dzEditableComponent {
     console.log('User',store.get('subUser'));
     let cartProducts = window.store.get('cartProducts');
     let cartDesc = await this.cartToDesc(cartProducts);
+
     
-    const order = {
-      'cartItems': window.store.get('cartItems'),
-      'description': cartDesc,
-      'shippingAddress': '-',
-      'shippingMethod': '自取',
-      'paymentMethod':  'payPal',
-      'date': new Date().getTime(),
-      'total':this.total
+
+//cartItems
+const cartItems = window.store.get('cartItems') || {};
+
+ const cartDiscount = window.store.get('cartDiscount') || {
+      code: '',
+      amount: 0,
     };
-    
-    if (!order.cartItems) {
-      await window.helpers.showModal(window.helpers.getDefaultConfig().messages.noItemInCart);
-      return;
+const paymentMethod = window.store.get('paymentMethod') || {
+    key: '',
+    text: 'paypal',
+    amount: 0,
+    note: ''
+};
+const shippingAddress = window.store.get('shippingAddress') || {
+    shippingFullName: 'default',
+    shippingPhone: 'default',
+    shippingAddress: 'default',
+};
+
+const shippingMethod = window.store.get('shippingMethod') || {
+  key: '',
+  text: '',
+  amount: 0,
+  note: ''
+};
+let user = JSON.parse(localStorage.getItem('authUser') || {});
+console.log('User',user);
+ 
+    let id = new Date().getTime();
+
+    const order = {
+        "id" : id,
+        "jsonCartItems": cartItems,         
+        "jsonCartDiscount" : cartDiscount,
+        "jsonPaymentMethod": paymentMethod,
+        "jsonShippingAddress" : shippingAddress,
+        "jsonShippingMethod": shippingMethod,
+        "orderDatetime" : new Date().getTime(),
+        "status" : "unpaid",
+        "description": cartDesc,
+        "total" : this.total,
+        "userId" : user.profile.id
     }
 
-    // if (!order.shippingAddress) {
-    //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.shippingAddressRequired);
-    //   return;
-    // }
-
-    // if (!order.shippingMethod) {
-    //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.shippingMethodRequired);
-    //   return;
-    // }
-
-    // if (!order.paymentMethod) {
-    //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.paymentMethodRequired);
-    //   return;
-    // }
 
     return order;
   }
-
+  
   async _handleSubmitOrder(isPaid = false) {
+    console.log ('ordersumbitted')
     const order = await this._getValidOrder();
-    if (isPaid)
-      order.status = 'paid';
-    else
-      order.status = 'not paid';
-    console.log('Before',order);
-    if (!order) {
-      return;
-    }
-    this.order = order;
-    const orderRes = await window.authUser().submitOrder({
-      ...order,
-      status: isPaid ? window.helpers.getDefaultConfig().orderStatus.inProgress.key : window.helpers.getDefaultConfig().orderStatus.new.key,
-    });
+    console.log('Order',order);
+    const orderManager = new DataPackage('order');
+    let res = await orderManager.saveDataWithCache(order.id,order);
+
     await window.helpers.showModal(window.helpers.getDefaultConfig().messages.submitOrderSuccessfully);
 
     await this._cleanCart();
-    //location.href="/user-profile.html";
-    // location.href = `${window.helpers.getDefaultConfig().urls.orderDetail}?id=${orderRes.data.data.id}`;
+    let user = JSON.parse(localStorage.getItem('authUser') || {});
+    console.log('User',user);
+    let content = 
+    `
+      你的訂單(${order.id})已經建立。請到以下此<a href="https://${window.siteUid}.dazzle.website/order-detail.html?id=${order.id}">連結</a>繼續付款或檢視訂單狀況. 
+      <a href="https://${window.siteUid}.dazzle.website/order-detail.html?id=${order.id}">https://${window.siteUid}.dazzle.website/order-detail.html?id=${order.id}</a>
+    `;
+    Dazzle.sendEmail(user.profile.email,content,`你的訂單（${order.id}）已經建立`);
+    console.log(user.profile.email,content,`你的訂單（${order.id}）已經建立`);
+    
+    // location.href="/user-profile.html";
+    location.href = `${window.helpers.getDefaultConfig().urls.orderDetail}?id=${order.id}`;
   }
 }
 

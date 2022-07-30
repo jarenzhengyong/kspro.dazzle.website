@@ -53,13 +53,14 @@ class dzUserPanelCode extends dzEditableComponent {
               location.href = window.helpers.getDefaultConfig().urls.login;
             }
             break;
-          case '_handleClickLogout':
-            localStorage.removeItem('authUser');
-            localStorage.removeItem('token');
+          // case '_handleClickLogout':
+          //   localStorage.removeItem('authUser');
+          //   localStorage.removeItem('token');
 
-            await window.helpers.showModal(window.helpers.getDefaultConfig().messages.logoutSuccessfully, {autoClose: true});
-            location.href = window.helpers.getDefaultConfig().urls.login;
-            break;
+            
+          //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.logoutSuccessfully, {autoClose: true});
+          //   location.href = window.helpers.getDefaultConfig().urls.login;
+          //   break;
           case '_handleClickProfile':
             location.href = window.helpers.getDefaultConfig().urls.profile;
             break;
@@ -117,6 +118,9 @@ class dzUserPanelCode extends dzEditableComponent {
   async logout(){
           localStorage.removeItem('authUser');
           localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          localStorage.clear();
+          window.store.clearAll();
           await window.helpers.showModal(window.helpers.getDefaultConfig().messages.logoutSuccessfully, {autoClose: true});
           location.href = window.helpers.getDefaultConfig().urls.login;
   }

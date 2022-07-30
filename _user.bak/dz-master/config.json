@@ -1,0 +1,17 @@
+{
+  "requiredComponents": [
+    "dz-cart-status",
+    "dz-list",
+    "dz-menu",
+    "dz-product-detail",
+    "dz-product-item",
+    "dz-product-wrapper",
+    "dz-setup",
+    "dz-slider",
+    "dz-user-login",
+    "dz-user-panel",
+    "dz-user-profile",
+    "dz-user-register",
+    "dz-user-register-confirmation"
+  ]
+}

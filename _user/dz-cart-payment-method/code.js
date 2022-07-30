@@ -20,7 +20,6 @@ class dzCartPaymentMethodCode extends dzEditableComponent {
       amount: 0,
       note: ''
     };
-
     try {
       this.querySelector(`[name=paymentMethod][data-key=${currentData.key}]`).checked = true;
     } catch (e) {}

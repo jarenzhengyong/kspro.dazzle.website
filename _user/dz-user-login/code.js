@@ -24,7 +24,11 @@ class dzUserLoginCode extends dzEditableComponent {
     try {
       const res = await window.authUser().login(credentials);
       localStorage.setItem('token', res.data.data.jwt);
+      localStorage.setItem('openDistro', res.data.data.openDistro);
       localStorage.setItem('authUser', JSON.stringify(res.data.data.data));
+      localStorage.setItem('user', JSON.stringify(res.data.data.data));
+      localStorage.setItem('privateJsonOther',JSON.stringify(res.data.data.data.privateJsonOther));
+      console.log('Data',res.data.data.data.privateJsonOther);
 
       await window.helpers.showModal(window.helpers.getDefaultConfig().messages.loginSuccessfully, {autoClose: true});
       window.location = '/';

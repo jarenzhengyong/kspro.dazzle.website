@@ -15,6 +15,9 @@ class dzOrderItemCode extends dzEditableComponent {
 
   connectedCallback() {
     super.connectedCallback();
+    console.log('Items',this.items);  
+
+
   }
 
   onCreated() {

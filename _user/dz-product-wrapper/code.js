@@ -140,21 +140,23 @@ class dzProductWrapperCode extends dzEditableComponent{
         showNext: false,
         callback: (currentPageItems) => {
           wrapper.innerHTML = '';
-          let allHtml = '';
-
+          console.log('Callback');
           currentPageItems.forEach(item => {
             item['image'] = item['image'] || defaultImage;
             let html = this.itemManager.replaceToken(item, template);
-            allHtml = allHtml + html;
+            let productItem = document.createElement('dz-product-item');
+            productItem.setAttribute('data-id',item['id']);
+            productItem.innerHTML = html;
+            // allHtml = allHtml + html;
+            wrapper.appendChild(productItem);
           });
 
-          wrapper.innerHTML = allHtml;
 
           this._matchHeight();
           setTimeout(() => {
             this._matchHeight();
             // jaren
-            this._listenDzFunction();
+            // this._listenDzFunction();
           }, 1000);
         },
       });

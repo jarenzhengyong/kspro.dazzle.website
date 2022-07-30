@@ -10,11 +10,13 @@
       "dz-product-detail",
       "dz-product-item",
       "dz-product-wrapper",
+      "dz-product-search",
       "dz-treatment-wrapper",
       "dz-setup",
       "dz-slider",
       "dz-user-login",
       "dz-user-panel",
+      "dz-user-detail",
       "dz-user-profile",
       "dz-user-register",
       "dz-user-register-confirmation",
@@ -30,12 +32,13 @@
       "dz-user-profile",
       "dz-order-wrapper",
       "dz-order-item",
+      "dz-order-product",
       "dz-order-detail",
       "dz-hot-product",
       "dz-master",
       "dz-item",
-      "dz-booking-popup",
-      "dz-booking-time-popup"
+      "dz-shipping",
+      "dz-payment"
     ]
   }
   

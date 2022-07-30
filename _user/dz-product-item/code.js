@@ -60,9 +60,13 @@ class dzProductItemCode extends dzEditableComponent {
     window.location.href = `/product/${this.id}`;
   }
 
+
+ 
+
   async _listenDzFunction() {
     let buttons = this.querySelectorAll('[dz-func]');
 
+    
     buttons.forEach(item => {
       let fc = item.getAttribute('dz-func') || null;
       item.addEventListener('click', () => {
@@ -70,16 +74,16 @@ class dzProductItemCode extends dzEditableComponent {
           case '_clickItemImage':
             this._onClickItemImage();
             break;
-          case '_clickAddToCart':
+          case '_addToCart':
             this._onClickAddToCart();
             break;
           case '_clickRemoveFromCart':
             this._onClickRemoveFromCart();
             break;
-          case '_clickLikeItem':
+          case '_likeItem':
             this._onClickLikeItem();
             break;
-          case '_clickUnlikeItem':
+          case '_unlikeItem':
             this._onClickUnlikeItem();
             break;
         }
@@ -99,22 +103,62 @@ class dzProductItemCode extends dzEditableComponent {
     this._handleCartStatus();
   }
 
-  async _onClickAddToCart() {
-    const itemId = this.getAttribute('id');
-    const cartItems = window.store.get('cartItems') || {};
-    if (!cartItems[itemId]) {
-      cartItems[itemId] = {
-        id: itemId,
-        quantity: 1,
-      };
-      window.store.set('cartItems', cartItems);
-      await window.helpers.showModal(window.helpers.getDefaultConfig().messages.addItemToCartSuccessfully, {autoClose: true});
-    } else {
-      await window.helpers.showModal(window.helpers.getDefaultConfig().messages.itemAlreadyInCart, {autoClose: true});
-    }
 
-    this._handleCartStatus();
+  async _addToCart(productId) {
+    // jaren
+    const cartItems = this._getStore('cartItems') || {};
+    const purchaseQuantity = 1;
+    const updatedCartItems = {
+      ...cartItems,
+      [productId]: {
+        id: productId,
+        quantity: productId in cartItems ? cartItems[productId].quantity + purchaseQuantity : purchaseQuantity,
+      },
+    };
+    await window['helpers'].showModal('Add item successfully', {autoClose: true});
+    this._setStore('cartItems', updatedCartItems);
   }
+
+  _setStore(key, value) {
+    window.store.set(key, value);
+  }
+  _getStore(key) {
+    return window.store.get(key);
+  }
+  
+  async _onClickAddToCart() {
+    const productId = this.getAttribute('data-id');
+   // jaren
+   const cartItems = this._getStore('cartItems') || {};
+   const purchaseQuantity = 1;
+   const updatedCartItems = {
+     ...cartItems,
+     [productId]: {
+       id: productId,
+       quantity: productId in cartItems ? cartItems[productId].quantity + purchaseQuantity : purchaseQuantity,
+     },
+   };
+   await window['helpers'].showModal('Add item successfully', {autoClose: true});
+   this._setStore('cartItems', updatedCartItems);
+
+
+    // const cartItems = window.store.get('cartItems') || {};
+    // if (!cartItems[itemId]) {
+    //   cartItems[itemId] = {
+    //     id: itemId,
+    //     quantity: 1,
+    //   };
+    //   window.store.set('cartItems', cartItems);
+    //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.addItemToCartSuccessfully, {autoClose: true});
+    // } else {
+    //   await window.helpers.showModal(window.helpers.getDefaultConfig().messages.itemAlreadyInCart, {autoClose: true});
+    // }
+
+    // this._handleCartStatus();
+  }
+
+
+
 
   async _onClickLikeItem() {
     const itemId = this.getAttribute('id');

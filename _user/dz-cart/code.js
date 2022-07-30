@@ -138,8 +138,8 @@ class dzCartCode extends dzEditableComponent {
       subTotal = subTotal + item.subTotal;
 
       htmlContent  =this.productManager.replaceToken(item, cartItemTemplate);
-      let elm = document.createElement('tr');
-      elm.className = 'cross';
+      let elm = document.createElement('dz-cart-item');
+      // elm.className = 'cross';
       elm.innerHTML = htmlContent;
       // let elm = this.htmlToElement(htmlContent);
       elm.id = item.id;

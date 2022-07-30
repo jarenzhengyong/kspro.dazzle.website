@@ -31,7 +31,7 @@ class dzUserRegisterCode extends dzEditableComponent {
         'password': 'required',
         'confirmation': {
           required: true,
-          equalTo: '#password2',
+          equalTo: '#password',
         },
         /*'phone': 'required',
         'address_1': 'required', */
